@@ -1,8 +1,5 @@
 #include "Arduino.h"
-#include "model_data.h"
-
-#include <TensorFlowLite.h>
-
+#include "NeuralNetwork.h"
 
 void setup() {
   // put your setup code here, to run once:
@@ -10,5 +7,7 @@ void setup() {
   while(!Serial);
 
   Serial.println("Ready");
-  
+
+  NeuralNetwork* m_nn = new NeuralNetwork();
+  Serial.println("Created Neural Net");
 }
